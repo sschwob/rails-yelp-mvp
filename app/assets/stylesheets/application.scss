@@ -11,3 +11,46 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+@import "components/cards_restaurant";
+@import "restaurants";
+@import "reviews";
+
+body {
+  background-color: #f0f0f0 !important;
+}
+
+#header {
+  background-color: #e7cead;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+#header a {
+  text-decoration: none;
+  color: #7f8f9f;
+  margin-bottom: 0 !important;
+  font-weight: bold;
+}
+
+#header a:hover {
+  color: #5a6570;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.form-title {
+  margin: 30px 0 10px !important;
+  color: #7a8896 !important;
+}

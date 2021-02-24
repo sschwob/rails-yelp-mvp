@@ -1,0 +1,26 @@
+<div class="my_container">
+  <div class="show_resto_card d-flex">
+    <div class="card_img"><img src="<%= @restaurant.img %>"  alt="<%= @restaurant.name %>"></div>
+    <div class="card_content flex-grow-1">
+      <h2 class="card_name"><%= @restaurant.name %></h2>
+      <p class="card_address"><%= @restaurant.address %></p>
+      <p class="card_phone"><%= @restaurant.phone_number %></p>
+      <%= link_to new_restaurant_review_path(@restaurant) do %> 
+      <span class="add_review"><i class="icon-plus-sign"></i></span>
+      <% end %>
+      <span class="card_category"><%= @restaurant.category.capitalize %></span>
+    </div>
+  </div>
+
+  <% if @restaurant.reviews.size > 0 %>
+    <div class="show_reviews">
+      <% @restaurant.reviews.each do |review| %>
+        <div class="review">
+        <span class="review-rate">Rate : <%= review.rating %></span>
+        <p class="review-content"><%= review.content %></p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+</div>

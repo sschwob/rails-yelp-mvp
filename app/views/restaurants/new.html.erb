@@ -1,0 +1,11 @@
+ <div class="my_container form-group">
+  <h2 class="form-title">New Restaurant</h2>
+   <%= simple_form_for(@restaurant) do |f| %>
+    <%= f.input :name, class: 'input-group-text'%>
+    <%= f.input :address, class: 'input-group-text' %>
+    <%= f.input :phone_number, class: 'input-group-text' %>
+    <%= f.input :img, class: 'input-group-text' %>
+    <%= f.input :category, collection: ["chinese", "italian", "japanese", "french", "belgian"] %>
+    <%= f.submit class: 'btn btn-secondary' %>
+  <% end %>
+</div>

@@ -9,9 +9,17 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   </head>
 
   <body>
-    <%= yield %>
+    <header id="header">
+      <div id="title"><%= link_to 'Roubaix Restaurants', "/" %></div>
+      <div id="new_resto"><%= link_to 'New Restaurant', new_restaurant_path %></div>
+    </header>
+
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

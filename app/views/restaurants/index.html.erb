@@ -1,0 +1,15 @@
+<div id="resto_index">
+  <% @restaurants.each do |restaurant| %>
+    <%= link_to restaurant_path(restaurant) do %>
+      <div class="resto_card d-flex">
+        <div class="card_img"><img src="<%= restaurant.img %>"  alt="<%= restaurant.name %>"></div>
+        <div class="card_content flex-grow-1">
+          <h2 class="card_name"><%= restaurant.name %></h2>
+          <p class="card_address"><%= restaurant.address %></p>
+          <p class="card_phone"><%= restaurant.phone_number %></p>
+          <span class="card_category"><%= restaurant.category.capitalize %></span>
+        </div>
+      </div>
+     <% end %>
+  <% end %>
+</div>

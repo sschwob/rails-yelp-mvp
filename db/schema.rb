@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_24_100235) do
+ActiveRecord::Schema.define(version: 2021_02_24_114126) do
 
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2021_02_24_100235) do
     t.string "category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "img", default: "https://upload.wikimedia.org/wikipedia/commons/b/b1/Missing-image-232x150.png"
   end
 
   create_table "reviews", force: :cascade do |t|

@@ -1,3 +1,34 @@
 // Place all the styles related to the Reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.show_reviews {
+  border: 1px solid #c8d2db;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.review {
+  width: 90%;
+  margin: 10px auto;
+  border: 1px solid #c8d2db;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+.collection_radio_buttons {
+  margin: 0 5px;
+}
+
+.btn-review {
+  margin-top: 15px;;
+}
+
+.review-rate {
+  margin-left: 10px;
+  border-bottom: 1px solid #c8d2db;
+}
+
+.review-content {
+  margin-left: 30px;
+}

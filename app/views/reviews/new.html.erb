@@ -1,0 +1,11 @@
+ <div class="my_container form-group">
+  <h2 class="form-title">New Review for <%= @restaurant.name %></h2>
+   <%= simple_form_for [ @restaurant, @review ] do |f| %>
+    <%= f.input :content, as: :text, class: 'input-group-text'%>
+    <label class="text required" for="review_content">Rating <abbr title="required">*</abbr></label>
+    <br>
+    <%= f.collection_radio_buttons :rating, [[1, 'Bad'] ,[2, 'Ok'], [3, 'Great'], [4, 'Very Nice'], [5, 'Wonderfull']], :first, :last %>
+    <br>
+    <%= f.submit class: 'btn btn-secondary btn-review' %>
+  <% end %>
+</div>
